@@ -1,0 +1,10 @@
+=====Google Sheet integration=====
+
+1. Open Google Developer Console
+2. Create New project and name it flask-profile
+3. Enable the APIs - Google Drive API and Google Sheets API
+4. Go to Service Accounts and create new Account
+5. Go to Manage Keys. Create new JSON key and download it as flask-profile.json
+6. Create new Google sheet, name it flask-profile and share it with Client email id from flask-profile.json
+7. In flask-profile sheet, create two sheets - Profile and Contacts
+8. Run the application. If error occurs disconnect and press F5. If no error, check Contacts sheet. 

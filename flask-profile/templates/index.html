@@ -23,13 +23,13 @@
           <div class="card m-3">
             <div class="card-content">
               <h1 class="title">About Me</h1>
-              <p>Budding person...</p>
+              <p>{{profile.about}}</p>
             </div>
           </div>
           <div class="card m-3 has-background-link-light">
             <div class="card-content">
               <h1 class="title">Interests</h1>
-              <p>Some of them are...</p>
+              {{profile.interests|safe}}
             </div>
           </div>
         </div>
@@ -37,13 +37,13 @@
           <div class="card m-3 has-background-primary-light">
             <div class="card-content">
               <h1 class="title">Experience</h1>
-              <p>1 2 3...</p>
+              {{profile.experience|safe}}
             </div>
           </div>
           <div class="card m-3 has-background-warning-light">
             <div class="card-content">
               <h1 class="title">Education</h1>
-              <p>College and School</p>
+              {{profile.education|safe}}
             </div>
           </div>
         </div>

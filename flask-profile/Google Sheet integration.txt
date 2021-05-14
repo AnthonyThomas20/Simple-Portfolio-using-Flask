@@ -7,4 +7,31 @@
 5. Go to Manage Keys. Create new JSON key and download it as flask-profile.json
 6. Create new Google sheet, name it flask-profile and share it with Client email id from flask-profile.json
 7. In flask-profile sheet, create two sheets - Profile and Contacts
-8. Run the application. If error occurs disconnect and press F5. If no error, check Contacts sheet. 
+8. Run the application. If error occurs disconnect and press F5. If no error, check Contacts sheet.
+9. Put given content in sheet in respective rows. (You can put any type of content)
+
+<div class="content">
+	<ul>
+		<li>Cycling</li>
+		<li>Cricket</li>
+		<li>Drawing</li>
+		<li>Reading</li>
+	</ul>
+</div>
+
+<div class="content">
+	<ul>
+		<li>HTML, CSS - 2 years experience</li>
+		<li>C - 2 years experience</li>
+		<li>Python - 1 year experience</li>
+		<li>MySQL, Firebase and AWS</li>
+	</ul>
+</div>
+
+<div class="content">
+	<ol>
+		<li>Fr. Conceicao Rodrigues Institute of Technology, Vashi</li>
+		<li>Holy Angels Jr. College, Dombivli</li>
+		<li>St. Therese Convent High School, Dombivli</li>
+	</ol>
+</div>

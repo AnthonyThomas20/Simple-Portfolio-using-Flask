@@ -6,10 +6,16 @@ sh = gc.open('flask-profile')
 
 shProfile = sh.get_worksheet(0)
 shContacts = sh.get_worksheet(1)
-shContacts.append_row('John Doe', 'johndoe@gmail.com', 'Hello')
+shContacts.append_row(['John', 'johndoe@gmail.com', 'Hello'])
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    profile = {
+        'about':shProfile.acell('B1').value,
+        'interests':shProfile.acell('B2').value,
+        'experience':shProfile.acell('B3').value,
+        'education':shProfile.acell('B4').value
+    }
+    return render_template('index.html',profile=profile)

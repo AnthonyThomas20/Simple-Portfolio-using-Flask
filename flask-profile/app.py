@@ -6,7 +6,6 @@ sh = gc.open('flask-profile')
 
 shProfile = sh.get_worksheet(0)
 shContacts = sh.get_worksheet(1)
-shContacts.append_row(['John', 'johndoe@gmail.com', 'Hello'])
 
 app = Flask(__name__)
 

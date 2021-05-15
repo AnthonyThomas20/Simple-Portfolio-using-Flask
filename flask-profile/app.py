@@ -19,3 +19,7 @@ def home():
         'education':shProfile.acell('B4').value
     }
     return render_template('index.html',profile=profile)
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')

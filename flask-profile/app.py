@@ -1,5 +1,5 @@
 import gspread
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 gc = gspread.service_account(filename='flask-profile.json')
 sh = gc.open('flask-profile')
@@ -9,15 +9,18 @@ shContacts = sh.get_worksheet(1)
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def home():
+    if request.method == 'POST':
+        shContacts.append_row([request.form['name'], request.form['e-mail'], request.form['message']])
+
     profile = {
         'about':shProfile.acell('B1').value,
         'interests':shProfile.acell('B2').value,
         'experience':shProfile.acell('B3').value,
         'education':shProfile.acell('B4').value
     }
-    return render_template('index.html',profile=profile)
+    return render_template('index.html',profile=profile)    
 
 @app.route('/contact')
 def contact():
